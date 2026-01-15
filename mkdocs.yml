@@ -1,0 +1,87 @@
+site_name: Ask More, Build Better
+site_description: A workshop on using GitHub Copilot effectively - Ask Mode for learning and Agent Mode for building
+site_author: Codess Australia
+site_url: https://codess-aus.github.io/ask-more-build-better/
+
+# Repository
+repo_name: codess-aus/ask-more-build-better
+repo_url: https://github.com/codess-aus/ask-more-build-better
+
+# Theme configuration
+theme:
+  name: material
+  palette:
+    # Light mode with gradient colors
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode with gradient colors
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  icon:
+    logo: material/code-braces
+    repo: fontawesome/brands/github
+
+# Plugins
+plugins:
+  - search
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Custom CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Navigation
+nav:
+  - Home: index.md
+  - Ask Mode: ask-mode.md
+  - Agent Mode: agent-mode.md
+  - Best Practices: best-practices.md
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/codess-aus
